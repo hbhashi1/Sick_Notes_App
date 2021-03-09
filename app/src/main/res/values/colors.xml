@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wine_red">#6B2737</color>
+    <color name="persian_orange">#E08E45</color>
+    <color name="granny_smith_apple">#C7F2A7</color>
+    <color name="light_green">#E2F9DB</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

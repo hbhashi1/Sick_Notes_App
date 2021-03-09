@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sick Notes</string>
+    <string name="todo">TODO</string>
+    <string name="email">Email</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login_now">Login Now</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_to_sicknotes">New to SickNotes?</string>
+    <string name="register_new_account">Register new account</string>
+</resources>
