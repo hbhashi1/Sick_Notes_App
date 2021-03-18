@@ -112,4 +112,16 @@
         app:layout_constraintTop_toBottomOf="@id/new_user"
         android:backgroundTint="@color/wine_red" />
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="205dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:srcCompat="@drawable/sick_notes_logo_jpeg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

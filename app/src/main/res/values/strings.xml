@@ -9,4 +9,6 @@
     <string name="reset_password">Reset Password</string>
     <string name="new_to_sicknotes">New to SickNotes?</string>
     <string name="register_new_account">Register new account</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>
