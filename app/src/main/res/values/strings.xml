@@ -11,4 +11,7 @@
     <string name="register_new_account">Register new account</string>
     <string name="full_name">Full Name</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="my_medical_chart">My Medical Chart</string>
+    <string name="send_new_reading_to_my_physician">Send New reading to my physician</string>
+    <string name="back">Back</string>
 </resources>

@@ -10,7 +10,7 @@ class Page4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page4)
 
-        val button2 = findViewById<Button>(R.id.button2)
+        val button2 = findViewById<Button>(R.id.new_reading)
         button2.setOnClickListener {
             val intent = Intent(this, Page5::class.java)
             startActivity(intent)
