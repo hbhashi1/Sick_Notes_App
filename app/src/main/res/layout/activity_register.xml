@@ -4,6 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background_color"
     tools:context=".Register">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="205dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:srcCompat="@drawable/sick_notes_logo_jpeg" />
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_bg"
+        android:hint="@string/full_name"
+        android:padding="16dp"
+        android:layout_marginTop="240dp"
+        android:textColorHint="@color/wine_red"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_bg"
+        android:hint="@string/email_address"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/wine_red"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/Name"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_bg"
+        android:hint="@string/password"
+        android:textColorHint="@color/wine_red"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/email_bg"
+        android:hint="@string/confirm_password"
+        android:textColorHint="@color/wine_red"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/register_new_account"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password"
+        android:backgroundTint="@color/wine_red" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
