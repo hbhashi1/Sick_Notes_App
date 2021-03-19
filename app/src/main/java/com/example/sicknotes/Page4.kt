@@ -10,11 +10,19 @@ class Page4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page4)
 
-        val button2 = findViewById<Button>(R.id.new_reading)
-        button2.setOnClickListener {
+        val newReading = findViewById<Button>(R.id.new_reading)
+        newReading.setOnClickListener {
             val intent = Intent(this, Page5::class.java)
             startActivity(intent)
 
         }
+
+        val myChartButton = findViewById<Button>(R.id.my_chart)   // app breaks right here
+        myChartButton.setOnClickListener {
+            val intent = Intent(this, Page6b::class.java)
+            startActivity(intent)
+
+        }
+
     }
 }
