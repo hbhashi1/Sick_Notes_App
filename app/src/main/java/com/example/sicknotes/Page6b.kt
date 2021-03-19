@@ -10,7 +10,7 @@ class Page6b : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page6b)
 
-        val button3 = findViewById<Button>(R.id.button3)
+        val button3 = findViewById<Button>(R.id.my_chart)
         button3.setOnClickListener {
             val intent = Intent(this, Page6b::class.java)
             startActivity(intent)
