@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SickNotes">
+        <activity android:name=".page8"></activity>
         <activity android:name=".Page6b" />
         <activity android:name=".Reset_password" />
         <activity android:name=".Page5" />

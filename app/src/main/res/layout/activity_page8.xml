@@ -5,60 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C7F2A7"
-    tools:context=".Page5">
+    tools:context=".page8">
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginBottom="600dp"
+        android:backgroundTint="@color/wine_red"
         android:text="Back"
-        app:backgroundTint="#6B2737"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/confirmation"
+        android:layout_width="176dp"
+        android:layout_height="67dp"
+        android:backgroundTint="@color/wine_red"
+        android:text="Are You Sure?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/email_bg"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="176dp"
-        android:layout_height="90dp"
-        android:text="Instructions"
-        android:textSize="18sp"
-        app:backgroundTint="#6B2737"
+    <AutoCompleteTextView
+        android:id="@+id/doctorname"
+        android:layout_width="362dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text=" Send To:"
+        android:textColor="@color/wine_red"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintVertical_bias="0.3" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="229dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="80dp"
-        android:text="Send To Current Physician"
-        android:textSize="18sp"
-        app:backgroundTint="#6B2737"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="281dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="300dp"
-        android:text="Send Reading To New Physician"
-        android:textSize="18sp"
-        app:backgroundTint="#6B2737"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
 </androidx.constraintlayout.widget.ConstraintLayout>
