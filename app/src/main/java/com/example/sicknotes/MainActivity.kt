@@ -4,13 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
-import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
-import com.example.sicknotes.MainActivity
+import com.example.sicknotes.Register
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -25,31 +24,28 @@ class MainActivity : AppCompatActivity() {
         lateinit var login_button: Button
         lateinit var et_password: EditText
 
-        et_email = findViewById(R.id.email) as EditText
-        et_password = findViewById(R.id.password) as EditText
-        login_button = findViewById(R.id.login_button) as Button
+        et_email = findViewById<EditText>(R.id.email)
+        et_password = findViewById<EditText>(R.id.password)
+        //login_button = findViewById(R.id.login_button) as Button
 
-//* this is supposed to ensure that the email address entered is valid. If it is not valid, the login button should be disabled.
-        et_email.addTextChangedListener(object: TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+//* this is supposed to ensure that the email address is valid. but I am struggling to get the edittexts and button names to get grabbed by the system.
+        et_email.addTextChangedListener()
+        fun afterTextChanged(p0: Editable?) {
+        }
+        fun beforeTextChanged(p0: CharSequence?, p1:Int, p2: Int, p3: Int) {
+        }
+        fun onTextChanged(p0: CharSequence?, p1:Int, p2: Int, p3: Int) {
+            if(android.util.Patterns.EMAIL_ADDRESS.matcher(et_email.text.toString()).matches())
+                login_button.isEnabled = true
+            else {
+                login_button.isEnabled = false
+                et_email.setError("Invalid Email")
             }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                if(android.util.Patterns.EMAIL_ADDRESS.matcher(et_email.text.toString()).matches())
-                    login_button.isEnabled = true
-                else {
-                    login_button.isEnabled = false
-                    et_email.setError("Invalid Email")
-                }
-            }
-        })
+        }
 
         val registerButton = findViewById<Button>(R.id.register_button) //directing new users to register page
         registerButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
 
@@ -63,8 +59,8 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button) //directing existing users to login
         // change based on user authentication process
         loginButton.setOnClickListener {
-            //val intent = Intent(this, Page4::class.java)          I took out this because as soon as the button is pressed, it sends the user to the next page before my code can validate the user...
-            //startActivity(intent)
+            val intent = Intent(this, Page4::class.java)
+            startActivity(intent)
             //*start my conditional to ensure that user enters email and password
 
             when { //is for login button
