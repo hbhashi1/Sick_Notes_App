@@ -34,67 +34,69 @@
         app:srcCompat="@drawable/sick_notes_logo_jpeg" />
 
     <EditText
-        android:id="@+id/Name"
+        android:id="@+id/register_Name"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:autofillHints=""
         android:background="@drawable/email_bg"
         android:hint="@string/full_name"
-        android:padding="16dp"
-        android:layout_marginTop="240dp"
-        android:textColorHint="@color/wine_red"
         android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/register_email"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:background="@drawable/email_bg"
         android:hint="@string/email_address"
-        android:padding="16dp"
-        android:layout_marginTop="16dp"
-        android:textColorHint="@color/wine_red"
         android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/Name"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@id/register_Name" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/register_password"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/email_bg"
         android:hint="@string/password"
-        android:textColorHint="@color/wine_red"
-        android:padding="16dp"
-        android:layout_marginTop="16dp"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@id/register_email" />
 
     <EditText
         android:id="@+id/confirm_password"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/email_bg"
         android:hint="@string/confirm_password"
-        android:textColorHint="@color/wine_red"
-        android:padding="16dp"
-        android:layout_marginTop="16dp"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColorHint="@color/wine_red"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@id/register_password" />
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/register_button2"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

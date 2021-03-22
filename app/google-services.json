@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "64336491873",
+    "project_id": "sick-notes-dab9b",
+    "storage_bucket": "sick-notes-dab9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64336491873:android:5f37679002692e5a6b8120",
+        "android_client_info": {
+          "package_name": "com.example.sicknotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64336491873-di5t391s5gbaqj4non2082oh14on8vcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr8MF9i9pM8u7Rl5kViOwj0D_TEfwNUI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64336491873-di5t391s5gbaqj4non2082oh14on8vcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
