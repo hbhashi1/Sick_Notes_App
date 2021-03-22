@@ -29,9 +29,9 @@ class Register : AppCompatActivity() {
 
         val register_button = findViewById<Button>(R.id.register_button)
         register_button.setOnClickListener {
-            val intent = Intent(this, Page4::class.java)
-            startActivity(intent)
-
+            //val intent = Intent(this, Page4::class.java)
+            //startActivity(intent)
+            //I disabled this because it sends the user right to the next page without all the code following these lines
             when {
                 TextUtils.isEmpty(et_Name.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(

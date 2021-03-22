@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -28,20 +29,24 @@ class MainActivity : AppCompatActivity() {
         et_password = findViewById<EditText>(R.id.password)
         //login_button = findViewById(R.id.login_button) as Button
 
-//* this is supposed to ensure that the email address is valid. but I am struggling to get the edittexts and button names to get grabbed by the system.
-        et_email.addTextChangedListener()
-        fun afterTextChanged(p0: Editable?) {
-        }
-        fun beforeTextChanged(p0: CharSequence?, p1:Int, p2: Int, p3: Int) {
-        }
-        fun onTextChanged(p0: CharSequence?, p1:Int, p2: Int, p3: Int) {
-            if(android.util.Patterns.EMAIL_ADDRESS.matcher(et_email.text.toString()).matches())
-                login_button.isEnabled = true
-            else {
-                login_button.isEnabled = false
-                et_email.setError("Invalid Email")
+//* this is supposed to ensure that the email address is valid. If the email address is invalid, the login button is disabled.
+        et_email.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
-        }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if(android.util.Patterns.EMAIL_ADDRESS.matcher(et_email.text.toString()).matches())
+                    login_button.isEnabled = true
+                else {
+                    login_button.isEnabled = false
+                    et_email.setError("Invalid Email")
+                }
+            }
+
+        })
 
         val registerButton = findViewById<Button>(R.id.register_button) //directing new users to register page
         registerButton.setOnClickListener {
@@ -59,8 +64,8 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button) //directing existing users to login
         // change based on user authentication process
         loginButton.setOnClickListener {
-            val intent = Intent(this, Page4::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, Page4::class.java)      I disabled this because it sends the user right to the next page without all the code following these lines
+            //startActivity(intent)
             //*start my conditional to ensure that user enters email and password
 
             when { //is for login button
