@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         et_email = findViewById<EditText>(R.id.email)
         et_password = findViewById<EditText>(R.id.password)
-        //login_button = findViewById(R.id.login_button) as Button
+        login_button = findViewById(R.id.login_button) as Button  //uncommented this to fix the initialization error
 
 //* this is supposed to ensure that the email address is valid. If the email address is invalid, the login button is disabled.
         et_email.addTextChangedListener(object: TextWatcher {
