@@ -31,7 +31,8 @@ class Register : AppCompatActivity() {
         registerButton.setOnClickListener {
             //val intent = Intent(this, Page4::class.java)
             //startActivity(intent)
-
+            //I took out the above 2 lines because as soon as the button is pressed, it sends the user to the next page before my code can validate the user...
+            //therefore, the proceeding lines of code are needed before sending the user on..
             when {
                 TextUtils.isEmpty(et_Name.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         et_password = findViewById(R.id.password) as EditText
         login_button = findViewById(R.id.login_button) as Button
 
-//* this is supposed to ensure that the email address is valid. but I am struggling to get the edit texts and button names to get grabbed by the system.
+//* this is supposed to ensure that the email address entered is valid. If it is not valid, the login button should be disabled.
         et_email.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button) //directing existing users to login
         // change based on user authentication process
         loginButton.setOnClickListener {
-            //val intent = Intent(this, Page4::class.java)
+            //val intent = Intent(this, Page4::class.java)          I took out this because as soon as the button is pressed, it sends the user to the next page before my code can validate the user...
             //startActivity(intent)
             //*start my conditional to ensure that user enters email and password
 
