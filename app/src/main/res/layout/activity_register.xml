@@ -30,14 +30,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
+        app:layout_constraintVertical_bias="0.56"
         app:srcCompat="@drawable/sick_notes_logo_jpeg" />
 
     <EditText
         android:id="@+id/register_Name"
-        android:layout_width="322dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="136dp"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:autofillHints=""
         android:background="@drawable/email_bg"
         android:hint="@string/full_name"
@@ -47,12 +47,12 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <EditText
         android:id="@+id/register_email"
-        android:layout_width="319dp"
-        android:layout_height="53dp"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:autofillHints=""
         android:background="@drawable/email_bg"
@@ -67,8 +67,8 @@
 
     <EditText
         android:id="@+id/register_password"
-        android:layout_width="320dp"
-        android:layout_height="45dp"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/email_bg"
         android:hint="@string/password"
@@ -82,8 +82,8 @@
 
     <EditText
         android:id="@+id/confirm_password"
-        android:layout_width="333dp"
-        android:layout_height="49dp"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/email_bg"
         android:hint="@string/confirm_password"
