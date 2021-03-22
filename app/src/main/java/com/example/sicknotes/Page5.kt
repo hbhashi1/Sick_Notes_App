@@ -16,5 +16,12 @@ class Page5 : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+        val backButton = findViewById<Button>(R.id.back)   // sending user back to previous page
+        backButton.setOnClickListener {
+            val intent = Intent(this, Page4::class.java)
+            startActivity(intent)
+
+        }
     }
 }
