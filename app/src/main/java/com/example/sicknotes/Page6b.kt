@@ -10,6 +10,11 @@ class Page6b : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page6b)
 
+        val backButton = findViewById<Button>(R.id.back)   // sending user back to previous page
+        backButton.setOnClickListener {
+            val intent = Intent(this, Page4::class.java)
+            startActivity(intent)
 
+        }
     }
 }

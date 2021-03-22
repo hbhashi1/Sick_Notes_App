@@ -8,7 +8,7 @@
     tools:context=".Page6b">
 
     <Button
-        android:id="@+id/backbutton"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#6B2737"
