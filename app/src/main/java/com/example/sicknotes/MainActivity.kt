@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.example.sicknotes.Register
+import com.example.sicknotes.MainActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -20,12 +21,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        lateinit var et_email : EditText
-        lateinit var login_button: Button
-        lateinit var et_password: EditText
+        //lateinit var et_email : EditText      Not sure these are necessary...
+        //lateinit var login_button: Button
+        //lateinit var et_password: EditText
 
-        et_email = findViewById<EditText>(R.id.email)
-        et_password = findViewById<EditText>(R.id.password)
+        val et_email = findViewById<EditText>(R.id.email)
+        val et_password = findViewById<EditText>(R.id.password)
+        val login_button = findViewById<Button>(R.id.login_button)
         //login_button = findViewById(R.id.login_button) as Button
 
 //* this is supposed to ensure that the email address is valid. but I am struggling to get the edittexts and button names to get grabbed by the system.
@@ -43,8 +45,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val registerButton = findViewById<Button>(R.id.register_button) //directing new users to register page
-        registerButton.setOnClickListener {
+        val registerButton1 = findViewById<Button>(R.id.register_button1) //directing new users to register page
+        registerButton1.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
@@ -56,13 +58,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val loginButton = findViewById<Button>(R.id.login_button) //directing existing users to login
+        //val loginButton = findViewById<Button>(R.id.login_button) //directing existing users to login, taken out for now because I have entered the val above
         // change based on user authentication process
-        loginButton.setOnClickListener {
-            val intent = Intent(this, Page4::class.java)
-            startActivity(intent)
+        login_button.setOnClickListener {
+            //val intent = Intent(this, Page4::class.java)
+            //startActivity(intent)
             //*start my conditional to ensure that user enters email and password
-
             when { //is for login button
                 TextUtils.isEmpty(et_email.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(

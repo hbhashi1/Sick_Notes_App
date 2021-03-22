@@ -11,7 +11,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.example.sicknotes.R.id.register_button as register_button1
+import com.example.sicknotes.R.id.register_button2 as register_button1
 
 //this below line is used in the video but for some reason it gives me an error...
 //import kotlinx.android.synthetic.main.activity_register.*
@@ -21,14 +21,19 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        lateinit var et_Name : EditText
-        lateinit var et_register_email : EditText
-        lateinit var et_confirm_password : EditText
-        lateinit var et_register_password : EditText
+        //lateinit var et_Name : EditText   Taking these out because I am not sure they do what I want...
+        //lateinit var et_register_email : EditText
+        //lateinit var et_confirm_password : EditText
+        //lateinit var et_register_password : EditText
         //lateinit var register_button : Button
 
-        val registerButton = findViewById<Button>(register_button1)
-        registerButton.setOnClickListener {
+        val et_Name = findViewById<EditText>(R.id.register_Name)
+        val et_register_email = findViewById<EditText>(R.id.register_email)
+        val et_register_password = findViewById<EditText>(R.id.register_password)
+        val et_confirm_password = findViewById<EditText>(R.id.confirm_password)
+
+        val registerButton2 = findViewById<Button>(R.id.register_button2)
+        registerButton2.setOnClickListener {
             //val intent = Intent(this, Page4::class.java)
             //startActivity(intent)
             //I took out the above 2 lines because as soon as the button is pressed, it sends the user to the next page before my code can validate the user...
