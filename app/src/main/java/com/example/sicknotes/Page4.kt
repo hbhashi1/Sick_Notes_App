@@ -10,6 +10,9 @@ class Page4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page4)
 
+        val userID = intent.getStringExtra("user_id")
+        val emailID = intent.getStringExtra("email_id")
+
         val newReading = findViewById<Button>(R.id.new_reading)
         newReading.setOnClickListener {
             val intent = Intent(this, Page5::class.java)

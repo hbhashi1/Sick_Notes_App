@@ -11,12 +11,12 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.example.sicknotes.R.id.register_button as register_button1
 
 //this below line is used in the video but for some reason it gives me an error...
 //import kotlinx.android.synthetic.main.activity_register.*
 
-
-class RegistrationActivityOLD : AppCompatActivity() {
+class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -27,22 +27,22 @@ class RegistrationActivityOLD : AppCompatActivity() {
         lateinit var et_register_password : EditText
         //lateinit var register_button : Button
 
-        val register_button = findViewById<Button>(R.id.register_button)
-        register_button.setOnClickListener {
-            val intent = Intent(this, Page4::class.java)
-            startActivity(intent)
+        val registerButton = findViewById<Button>(register_button1)
+        registerButton.setOnClickListener {
+            //val intent = Intent(this, Page4::class.java)
+            //startActivity(intent)
 
             when {
                 TextUtils.isEmpty(et_Name.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(
-                        this@RegistrationActivityOLD,
+                        this@Register,
                         "Please Enter Email",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
                 TextUtils.isEmpty(et_register_email.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(
-                        this@RegistrationActivityOLD,
+                        this@Register,
                         "Please Enter Email",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -50,7 +50,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
 
                 TextUtils.isEmpty(et_register_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
-                        this@RegistrationActivityOLD,
+                        this@Register,
                         "Please Enter Password",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -58,7 +58,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
 
                 TextUtils.isEmpty(et_confirm_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
-                        this@RegistrationActivityOLD,
+                        this@Register,
                         "Please Confirm Password",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -67,7 +67,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
                     val email: String = et_register_email.text.toString(). trim { it <= ' ' }
                     val password: String = et_register_password.text.toString(). trim { it <= ' ' }
 
-                    //Create an instance and create a "register a user" email and password
+                    //Create an instance and create a "register a user" email and password through Firebase
                     FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(
                             OnCompleteListener<AuthResult> { task ->
@@ -77,7 +77,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
 
                                     Toast.makeText(
-                                        this@RegistrationActivityOLD,
+                                        this@Register,
                                         "You have successfully registered",
                                         Toast.LENGTH_SHORT
                                     ).show()
@@ -85,7 +85,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
                                      *
                                      */
                                     val intent =
-                                        Intent( this@RegistrationActivityOLD, Page4::class.java)
+                                        Intent( this@Register, Page4::class.java)
                                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                     intent.putExtra( "user_id", firebaseUser.uid)
                                     intent.putExtra("email_id", email)
@@ -94,7 +94,7 @@ class RegistrationActivityOLD : AppCompatActivity() {
                                 } else {
                                     //if register is unsuccessful, show error message
                                     Toast.makeText(
-                                        this@RegistrationActivityOLD,
+                                        this@Register,
                                         task.exception!!.message.toString(),
                                         Toast.LENGTH_SHORT
                                     ).show()
