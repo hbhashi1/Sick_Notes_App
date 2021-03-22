@@ -21,12 +21,7 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        //lateinit var et_Name : EditText   Taking these out because I am not sure they do what I want...
-        //lateinit var et_register_email : EditText
-        //lateinit var et_confirm_password : EditText
-        //lateinit var et_register_password : EditText
-        //lateinit var register_button : Button
-
+        // must create the values for the edit texts and buttons and stuff
         val et_Name = findViewById<EditText>(R.id.register_Name)
         val et_register_email = findViewById<EditText>(R.id.register_email)
         val et_register_password = findViewById<EditText>(R.id.register_password)
