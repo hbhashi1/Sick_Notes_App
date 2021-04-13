@@ -18,7 +18,6 @@
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="20sp"
-        android:gravity="center_horizontal" />
 
     <!--ImageView: Bluetooth icon (on/off)-->
     <ImageView
