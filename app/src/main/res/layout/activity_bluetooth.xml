@@ -17,7 +17,7 @@
         android:padding="5dp"
         android:textAlignment="center"
         android:textColor="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"/>
 
     <!--ImageView: Bluetooth icon (on/off)-->
     <ImageView

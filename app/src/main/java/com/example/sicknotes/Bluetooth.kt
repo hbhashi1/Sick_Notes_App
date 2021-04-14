@@ -5,10 +5,21 @@ import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
+// import kotlinx.android.synthetic.main.activity_main.*
+import org.w3c.dom.Text
 
 class Bluetooth : AppCompatActivity() {
+val bluetoothStatusTv = findViewById<TextView>(R.id.bluetoothStatusTv)
+    val bluetoothStatusIv = findViewById<ImageView>(R.id.bluetoothStatusIv)
+    val turnOnBtn = findViewById<Button>(R.id.turnOnBtn)
+    val turnoffBtn= findViewById<Button>(R.id.turnoffBtn)
+    val discoverableBtn= findViewById<Button>(R.id.discoverableBtn)
+    val pairedBtn = findViewById<Button>(R.id.pairedBtn)
+    val pairedTv = findViewById<TextView>(R.id.pairedTv)
 
     private val REQUEST_CODE_ENABLE_BT: Int = 1;
     private val REQUEST_CODE_DISCOVERABLE_BT: Int = 2

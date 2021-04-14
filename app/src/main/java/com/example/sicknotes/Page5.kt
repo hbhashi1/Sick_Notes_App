@@ -14,14 +14,18 @@ class Page5 : AppCompatActivity() {
         sendToPhysician.setOnClickListener {
             val intent = Intent(this, page8::class.java)
             startActivity(intent)
+        }
 
+        val Instructions = findViewById<Button>(R.id.button5)   // app breaks right here
+        Instructions.setOnClickListener {
+            val intent = Intent(this, Bluetooth::class.java)
+            startActivity(intent)
         }
 
         val backButton = findViewById<Button>(R.id.back)   // sending user back to previous page
         backButton.setOnClickListener {
             val intent = Intent(this, Page4::class.java)
             startActivity(intent)
-
         }
     }
 }
