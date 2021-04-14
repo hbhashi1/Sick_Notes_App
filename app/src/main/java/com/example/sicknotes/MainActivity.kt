@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 login_button.isEnabled = true
             else {
                 login_button.isEnabled = false
-                et_email.setError("Invalid Email")
+                et_email.setError("woops! looks like that email did't work, please try again")
             }
         }
 
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 TextUtils.isEmpty(et_email.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(
                         this@MainActivity,
-                        "Please Enter Email",
+                        "uh oh, we're gonna need that email",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                 TextUtils.isEmpty(et_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
                         this@MainActivity,
-                        "Please Enter Password",
+                        "Umm, you need that password too yah know",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
                                     Toast.makeText(
                                         this@MainActivity,
-                                        "You have logged in successfully",
+                                        "Yippie! have logged in successfully",
                                         Toast.LENGTH_SHORT
                                     ).show()
                                     //* sending user to profile activity page
