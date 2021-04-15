@@ -10,14 +10,14 @@ class Page5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page5)
 
-        val sendToPhysician = findViewById<Button>(R.id.button7)   // app breaks right here
+        val sendToPhysician = findViewById<Button>(R.id.button7)   // this button sends you to page 8 correctly
         sendToPhysician.setOnClickListener {
             val intent = Intent(this, page8::class.java)
             startActivity(intent)
         }
 
-        val Instructions = findViewById<Button>(R.id.button5)   // app breaks right here
-        Instructions.setOnClickListener {
+        val instructions = findViewById<Button>(R.id.button5)   // app breaks right here
+        instructions.setOnClickListener {
             val intent = Intent(this, Bluetooth::class.java)
             startActivity(intent)
         }

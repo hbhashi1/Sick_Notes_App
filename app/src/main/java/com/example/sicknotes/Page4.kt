@@ -10,8 +10,8 @@ class Page4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page4)
 
-        val userID = intent.getStringExtra("user_id") //I am just hoping that pulling this info is what allows the user to stay logged in, aldo we can use this if we want to show a welcome message
-        val emailID = intent.getStringExtra("email_id")
+        //val userID = intent.getStringExtra("user_id") //I am just hoping that pulling this info is what allows the user to stay logged in, aldo we can use this if we want to show a welcome message
+        //val emailID = intent.getStringExtra("email_id")
 
         val newReading = findViewById<Button>(R.id.new_reading)
         newReading.setOnClickListener {
