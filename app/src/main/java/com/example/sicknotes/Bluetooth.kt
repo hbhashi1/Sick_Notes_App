@@ -13,7 +13,7 @@ import android.widget.Toast
 import org.w3c.dom.Text
 
 class Bluetooth : AppCompatActivity() {
-val bluetoothStatusTv = findViewById<TextView>(R.id.bluetoothStatusTv)
+    val bluetoothStatusTv = findViewById<TextView>(R.id.bluetoothStatusTv)
     val bluetoothStatusIv = findViewById<ImageView>(R.id.bluetoothStatusIv)
     val turnOnBtn = findViewById<Button>(R.id.turnOnBtn)
     val turnoffBtn= findViewById<Button>(R.id.turnoffBtn)
@@ -25,7 +25,7 @@ val bluetoothStatusTv = findViewById<TextView>(R.id.bluetoothStatusTv)
     private val REQUEST_CODE_DISCOVERABLE_BT: Int = 2
 
     //bluetooth adapter
-    lateinit var bAdapter: BluetoothAdapter
+    private lateinit var bAdapter: BluetoothAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
