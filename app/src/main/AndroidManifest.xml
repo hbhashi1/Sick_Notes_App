@@ -15,8 +15,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        //android:theme="@style/Theme.SickNotes">
-        <activity android:name=".Empatica"></activity>
+        android:theme="@style/Theme.SickNotes"> //may be a problem idk
+        <activity android:name=".Empatica2" />
         <activity android:name=".page8" />
         <activity android:name=".Page6b" />
         <activity android:name=".Reset_password" />
