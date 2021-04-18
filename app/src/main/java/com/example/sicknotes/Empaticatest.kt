@@ -18,6 +18,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -29,6 +30,7 @@ import com.empatica.empalink.config.EmpaSensorType
 import com.empatica.empalink.config.EmpaStatus
 import com.empatica.empalink.delegate.EmpaDataDelegate
 import com.empatica.empalink.delegate.EmpaStatusDelegate
+import com.example.sicknotes.R
 
 class MainActivity : AppCompatActivity(), EmpaDataDelegate, EmpaStatusDelegate {
     private var deviceManager: EmpaDeviceManager? = null
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity(), EmpaDataDelegate, EmpaStatusDelegate {
     @Override
     protected fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_empatica)
 
         // Initialize vars that reference UI components
         statusLabel = findViewById(R.id.status) as TextView?
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity(), EmpaDataDelegate, EmpaStatusDelegate {
         batteryLabel = findViewById(R.id.battery) as TextView?
         deviceNameLabel = findViewById(R.id.deviceName) as TextView?
         val disconnectButton: Button = findViewById(R.id.disconnectButton)
-        disconnectButton.setOnClickListener(object : OnClickListener() {
+        disconnectButton.setOnClickListener(object : DialogInterface.OnClickListener() {
             @Override
             fun onClick(v: View?) {
                 if (deviceManager != null) {
@@ -336,4 +338,8 @@ class MainActivity : AppCompatActivity(), EmpaDataDelegate, EmpaStatusDelegate {
         private const val REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1
         private const val EMPATICA_API_KEY = "" // TODO insert your API Key here
     }
+}
+
+private fun Button.setOnClickListener(onClickListener: DialogInterface.OnClickListener) {
+
 }
