@@ -16,6 +16,11 @@ class Page5 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val instructions = findViewById<Button>(R.id.button5)   // this button sends you to page 8 correctly
+        instructions.setOnClickListener {
+            val intent = Intent(this, Empatica2::class.java)
+            startActivity(intent)
+        }
 
         val backButton = findViewById<Button>(R.id.back)   // sending user back to previous page
         backButton.setOnClickListener {

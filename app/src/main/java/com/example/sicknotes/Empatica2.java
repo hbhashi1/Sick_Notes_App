@@ -36,7 +36,7 @@ import com.empatica.empalink.delegate.EmpaStatusDelegate;
 
 public class Empatica2 extends AppCompatActivity implements EmpaDataDelegate, EmpaStatusDelegate {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "Empatica";
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1;
     private static final String EMPATICA_API_KEY = "038e5d8f4c0d43d4b984b638de4deb0c"; // TODO insert your API Key here
@@ -57,7 +57,7 @@ public class Empatica2 extends AppCompatActivity implements EmpaDataDelegate, Em
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_empatica);
         // Initialize vars that reference UI components
         statusLabel = (TextView) findViewById(R.id.status);
         dataCnt = (LinearLayout) findViewById(R.id.dataArea);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sicknotes">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -14,8 +15,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
-        android:theme="@style/Theme.SickNotes"> //may be a problem idk
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SickNotes"
+        tools:replace="android:theme"> //may be a problem idk
         <activity android:name=".Empatica2" />
         <activity android:name=".page8" />
         <activity android:name=".Page6b" />
