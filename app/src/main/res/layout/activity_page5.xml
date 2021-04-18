@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="176dp"
-        android:layout_height="90dp"
+        android:layout_width="223dp"
+        android:layout_height="83dp"
         android:text="Instructions"
         android:textSize="18sp"
         app:backgroundTint="#6B2737"
