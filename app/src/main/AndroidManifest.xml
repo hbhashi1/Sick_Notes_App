@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SickNotes"
-        tools:replace="android:theme"> //may be a problem idk
+        tools:replace="android:theme">
         <activity android:name=".Empatica2" />
         <activity android:name=".page8" />
         <activity android:name=".Page6b" />
