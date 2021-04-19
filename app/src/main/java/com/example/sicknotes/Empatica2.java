@@ -39,7 +39,7 @@ public class Empatica2 extends AppCompatActivity implements EmpaDataDelegate, Em
     private static final String TAG = "Empatica";
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1;
-    private static final String EMPATICA_API_KEY = "038e5d8f4c0d43d4b984b638de4deb0c"; // TODO insert your API Key here
+    private static final String EMPATICA_API_KEY = "81b7f797b7a642008c5f1be3881380f1"; // TODO insert your API Key here
     private EmpaDeviceManager deviceManager = null;
     private TextView accel_xLabel;
     private TextView accel_yLabel;
