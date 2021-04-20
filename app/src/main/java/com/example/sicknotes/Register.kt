@@ -37,14 +37,14 @@ class Register : AppCompatActivity() {
                 TextUtils.isEmpty(et_Name.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(
                         this@Register,
-                        "Please Enter Email",
+                        "Gotta at least have a name, right?",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
                 TextUtils.isEmpty(et_register_email.text.toString().trim {it <=' '}) ->{
                     Toast.makeText(
                         this@Register,
-                        "Please Enter Email",
+                        "We're gonna need that email please",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -52,7 +52,7 @@ class Register : AppCompatActivity() {
                 TextUtils.isEmpty(et_register_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
                         this@Register,
-                        "Please Enter Password",
+                        "Yikes, have you ever made an account before?",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -60,7 +60,7 @@ class Register : AppCompatActivity() {
                 TextUtils.isEmpty(et_confirm_password.text.toString().trim { it <= ' '}) -> {
                     Toast.makeText(
                         this@Register,
-                        "Please Confirm Password",
+                        "Ummm that password did not match Mr. butterfingers",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -79,7 +79,7 @@ class Register : AppCompatActivity() {
 
                                     Toast.makeText(
                                         this@Register,
-                                        "You have successfully registered",
+                                        "YES! You finally registered!",
                                         Toast.LENGTH_SHORT
                                     ).show()
                                     /** now the new user is automatically registered, so we send to Profile Activity

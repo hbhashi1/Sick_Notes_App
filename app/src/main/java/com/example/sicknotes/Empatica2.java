@@ -53,6 +53,7 @@ public class Empatica2 extends AppCompatActivity implements EmpaDataDelegate, Em
     private TextView deviceNameLabel;
     private LinearLayout dataCnt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -70,6 +71,14 @@ public class Empatica2 extends AppCompatActivity implements EmpaDataDelegate, Em
         temperatureLabel = (TextView) findViewById(R.id.temperature);
         batteryLabel = (TextView) findViewById(R.id.battery);
         deviceNameLabel = (TextView) findViewById(R.id.deviceName);
+
+        Button backButton = (Button) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Empatica2.this, Page5.class));
+            }
+        });
 
         final Button disconnectButton = findViewById(R.id.disconnectButton);
 
