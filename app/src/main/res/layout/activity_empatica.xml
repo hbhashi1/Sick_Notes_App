@@ -33,8 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:background="@drawable/email_bg"
-            android:textColor="@color/black"
+            android:textColor="@color/wine_red"
             android:text="@string/accel" />
 
         <LinearLayout
@@ -52,8 +51,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="50dp"
+                android:width="25dp"
                 android:id="@+id/accel_x"
+                android:background="@drawable/email_bg"
                 />
 
             <TextView
@@ -64,8 +64,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="50dp"
+                android:width="25dp"
                 android:id="@+id/accel_y"
+                android:background="@drawable/email_bg"
                 />
 
             <TextView
@@ -76,8 +77,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="50dp"
+                android:width="25dp"
                 android:id="@+id/accel_z"
+                android:background="@drawable/email_bg"
                 />
 
         </LinearLayout>
@@ -88,13 +90,15 @@
             android:layout_below="@id/accel_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bvp_label" />
+            android:text="@string/bvp_label"
+            android:textColor="@color/wine_red"/>
 
         <TextView
             android:layout_below="@id/bvp_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bvp"
+            android:background="@drawable/email_bg"
             />
 
         <TextView
@@ -103,13 +107,15 @@
             android:layout_below="@id/bvp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/eda_label" />
+            android:text="@string/eda_label"
+            android:textColor="@color/wine_red"/>
 
         <TextView
             android:layout_below="@id/eda_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/eda"
+            android:background="@drawable/email_bg"
             />
 
         <TextView
@@ -118,13 +124,15 @@
             android:layout_below="@id/eda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ibi_label" />
+            android:text="@string/ibi_label"
+            android:textColor="@color/wine_red"/>
 
         <TextView
             android:layout_below="@id/ibi_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ibi"
+            android:background="@drawable/email_bg"
             />
 
         <TextView
@@ -133,13 +141,15 @@
             android:layout_below="@id/ibi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/temp_label" />
+            android:text="@string/temp_label"
+            android:textColor="@color/wine_red"/>
 
         <TextView
             android:layout_below="@id/temp_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/temperature"
+            android:background="@drawable/email_bg"
             />
 
         <TextView
@@ -148,13 +158,15 @@
             android:layout_below="@id/temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/battery_label" />
+            android:text="@string/battery_label"
+            android:textColor="@color/wine_red"/>
 
         <TextView
             android:layout_below="@id/battery_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/battery"
+            android:background="@drawable/email_bg"
             />
 
         <TextView
@@ -170,6 +182,8 @@
             android:layout_width="match_parent"
             android:backgroundTint="@color/wine_red"
             android:layout_height="44dp" />
+
+
 
     </LinearLayout>
 
