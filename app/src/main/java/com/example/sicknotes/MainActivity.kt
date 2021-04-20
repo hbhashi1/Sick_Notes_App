@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 login_button.isEnabled = true
             else {
                 login_button.isEnabled = false
-                et_email.setError("oops that didn't work, do you have an account?")
+                et_email.setError("Oops that didn't work, do you have an account?")
             }
         }
 
