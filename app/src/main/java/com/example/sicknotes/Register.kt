@@ -79,7 +79,7 @@ class Register : AppCompatActivity() {
 
                                     Toast.makeText(
                                         this@Register,
-                                        "YES! you finally registered!",
+                                        "YES! You finally registered!",
                                         Toast.LENGTH_SHORT
                                     ).show()
                                     /** now the new user is automatically registered, so we send to Profile Activity
