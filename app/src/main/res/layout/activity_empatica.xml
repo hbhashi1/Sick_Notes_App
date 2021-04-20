@@ -47,7 +47,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/accel_x" />
+                android:text="@string/accel_x"
+                android:textColor="@color/wine_red" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,7 +60,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/accel_y" />
+                android:text="@string/accel_y"
+                android:textColor="@color/wine_red" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/accel_z" />
+                android:text="@string/accel_z"
+                android:textColor="@color/wine_red" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,11 +87,13 @@
 
         <TextView
             android:id="@+id/bvp_label"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/accel_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bvp_label" />
+            android:layout_below="@id/accel_area"
+            android:layout_marginTop="10dp"
+            android:text="Blood Volume Pulse"
+            android:textColor="@color/wine_red"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_below="@id/bvp_label"
@@ -99,11 +104,13 @@
 
         <TextView
             android:id="@+id/eda_label"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/bvp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/eda_label" />
+            android:layout_below="@id/bvp"
+            android:layout_marginTop="10dp"
+            android:text="ElectroDermal Activity"
+            android:textColor="@color/wine_red"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_below="@id/eda_label"
@@ -114,11 +121,13 @@
 
         <TextView
             android:id="@+id/ibi_label"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/eda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ibi_label" />
+            android:layout_below="@id/eda"
+            android:layout_marginTop="10dp"
+            android:text="Inter Beat Interval"
+            android:textColor="@color/wine_red"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_below="@id/ibi_label"
@@ -129,11 +138,13 @@
 
         <TextView
             android:id="@+id/temp_label"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/ibi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/temp_label" />
+            android:layout_below="@id/ibi"
+            android:layout_marginTop="10dp"
+            android:text="@string/temp_label"
+            android:textColor="@color/wine_red"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_below="@id/temp_label"
@@ -144,11 +155,13 @@
 
         <TextView
             android:id="@+id/battery_label"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/battery_label" />
+            android:layout_below="@id/temperature"
+            android:layout_marginTop="10dp"
+            android:text="@string/battery_label"
+            android:textColor="@color/wine_red"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_below="@id/battery_label"
