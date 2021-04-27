@@ -7,30 +7,47 @@
     android:background="#C7F2A7"
     tools:context=".page8">
 
-    <Button
-        android:id="@+id/back"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/wine_red"
-        android:text="Back"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="600dp"
+        android:text="@string/back"
+        android:textSize="18sp"
+        app:backgroundTint="#6B2737"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.395" />
 
     <Button
         android:id="@+id/confirmation"
-        android:layout_width="176dp"
-        android:layout_height="67dp"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/wine_red"
         android:text="Are You Sure?"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/email"
+        app:layout_constraintVertical_bias="0.25" />
 
     <EditText
         android:id="@+id/email"
@@ -51,14 +68,26 @@
         android:id="@+id/doctorname"
         android:layout_width="362dp"
         android:layout_height="50dp"
-        android:background="@color/white"
+        android:background="@color/light_green"
         android:text=" Send To:"
         android:textColor="@color/wine_red"
         android:textColorHint="@color/wine_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logo"
         app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="205dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:srcCompat="@drawable/sick_notes_logo_jpeg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

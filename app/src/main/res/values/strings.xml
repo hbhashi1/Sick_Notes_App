@@ -14,4 +14,14 @@
     <string name="my_medical_chart">My Medical Chart</string>
     <string name="send_new_reading_to_my_physician">Send New reading to my physician</string>
     <string name="back">Back</string>
+    <string name="accel_x">Acceleration X</string>
+    <string name="accel">Acceleration</string>
+    <string name="emptyText">Empty Text</string>
+    <string name="accel_y">Acceleration Y</string>
+    <string name="accel_z">Acceleration Z</string>
+    <string name="bvp_label">Blood Volume Pulse</string>
+    <string name="eda_label">ElectroDermal Activity</string>
+    <string name="ibi_label">IBI</string>
+    <string name="temp_label">Temperature</string>
+    <string name="battery_label">Battery</string>
 </resources>

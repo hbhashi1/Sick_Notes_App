@@ -7,13 +7,13 @@ plugins {
 //apply plugin: 'com.google.gms.google-services'   // may need to be in the above brackets
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 29 //changed from 30
+    buildToolsVersion '29.0.2' //changed from 30.0.3
 
     defaultConfig {
         applicationId "com.example.sicknotes"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -64,4 +64,8 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.empatica.empalink:E4link:1.0.0@aar'
+
 }
